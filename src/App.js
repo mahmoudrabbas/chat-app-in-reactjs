@@ -1,13 +1,21 @@
 import React from 'react';
-import styles from './App.module.css';
-import Posts from './components/Posts';
+import { Routes, Route } from 'react-router-dom';
+import './styles.scss'
+import Home from './pages/home';
+import Login from './pages/login';
+import Register from './pages/register';
+
+
 
 function App() {
-  
+
   return (
-      <div className={styles.app}>
-        <Posts />
-      </div>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/home' element={<Home />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+    </Routes>
   );
 }
 
